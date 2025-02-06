@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be hidden initially.
+  </div>
+
+  <script>
+    // Check if element exists before manipulating it
+    const myDiv = document.getElementById("myDiv");
+    if (myDiv) {
+        myDiv.style.display = "none";
+
+        setTimeout(function() {
+            myDiv.style.display = "block";
+        }, 3000);
+    } else {
+        console.error("Element with id 'myDiv' not found.");
+    }
+  </script>
+</body>
+</html>
