@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be hidden initially.
+  </div>
+
+  <script>
+    // Incorrect way to hide an element using display: none
+    document.getElementById("myDiv").style.display = "none";
+
+    //Later attempting to show the element may fail if not handled properly
+    setTimeout(function(){
+        document.getElementById("myDiv").style.display = "block";
+    },3000);
+  </script>
+</body>
+</html>
